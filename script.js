@@ -1,3 +1,7 @@
+/* Шребаный грифт */
+let font = new FontFace('Marck Script', 'url(https://fonts.gstatic.com/s/marckscript/v16/nwpTtK2oNgBA3Or78gapdwuyzCg_WMM.woff2)');
+font.load().then(() => {
+    document.fonts.add(font);
 let canvas =document.getElementById('Heart');
 ctx = canvas.getContext("2d");
 /* Letter */
@@ -7,10 +11,11 @@ ctx.lineTo(300,150);
 ctx.lineTo(600,0);
 ctx.closePath();
 ctx.stroke();
+ctx.font = "35px Marck Script";
+ctx.fillText('Нажми на сердечко',160,280);
 /* Heart */
 let heart = {
-
-draw:function() {
+draw: function() {
     ctx.beginPath();
     ctx.fillStyle = 'rgb(222,51,51)';
     ctx.moveTo(300,130);
@@ -44,19 +49,23 @@ function pismo() {
     girl();
     text();
 }
-canvas.addEventListener('click',function(e){
+canvas.addEventListener('click', function(e) {
     let rect = canvas.getBoundingClientRect();
     let mouseX = e.clientX - rect.left;
     let mouseY = e.clientY - rect.top;
-
+    //console.log(rect.left, rect.top, rect);
     let heartWidth = 75;
     let heartHeight = 85;
     let heartX = 265;
     let heartY = 105;
     if (mouseX >= heartX && mouseX <= heartX + heartWidth &&
-        mouseY >= heartY && mouseY <= heartY + heartHeight){
-            ctx.clearRect(0,0,canvas.width,canvas.height);
-            pismo();
-            
-        }
+        mouseY >= heartY && mouseY <= heartY + heartHeight) {
+      // The heart was clicked
+      ctx.clearRect(0,0,canvas.width, canvas.height);
+      pismo();
+    }
 })
+
+
+  
+});
