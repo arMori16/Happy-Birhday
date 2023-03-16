@@ -40,7 +40,7 @@ function girl() {
     girl.src = 'girl.png';
 }
 function pismo() {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.font = "21px Marck Script";
     girl();
     text();
 }
