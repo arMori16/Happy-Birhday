@@ -35,7 +35,14 @@ function text() {
     ctx.fillText("P.S.ебать вы старые нахуй,когда за пенсионным?))",10,70);
     ctx.fillText("Я не знаю че даже желать,всего самого лучшего,надеюсь все, что ",10,90);
     ctx.fillText("ты сегодня пожелала сбудеться, да и вообще чтобы у тебя было ",10,110);
-    ctx.fillText("все ахуенно.",10,135);
+    ctx.fillText("все ахуенно.",10,130);
+    ctx.fillText("Да и главное чтобы ты смогла доучиться, найти себе",10,150);
+    ctx.fillText("ахуенную работу,при это не потерять мотивацию и",10,170);
+    ctx.fillText("силу,потому что если все же хочешь стать программ-",10,192);
+    ctx.fillText("-истом",10,212);
+    ctx.fillText("Короче з днюхой ебаааать!!!",10,230);
+    ctx.fillText('Writed by arMori :D to Ann',250,270);
+    ctx.font = "16px Marck Script";
 }
 function girl() {
     let girl = new Image();
@@ -65,7 +72,19 @@ canvas.addEventListener('click', function(e) {
       pismo();
     }
 })
+});
 
-
-  
+canvas.addEventListener('click', function(e) {
+    let rect = canvas.getBoundingClientRect();
+    let mouseX = e.clientX - rect.left;
+    let mouseY = e.clientY - rect.top;
+    //console.log(rect.left, rect.top, rect);
+    let heartWidth = 75;
+    let heartHeight = 85;
+    let heartX = 265;
+    let heartY = 105;
+    if (mouseX >= heartX && mouseX <= heartX + heartWidth &&
+        mouseY >= heartY && mouseY <= heartY + heartHeight) {
+      // The heart was clicked
+}
 });
