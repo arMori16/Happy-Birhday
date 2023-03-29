@@ -31,13 +31,13 @@ function text() {
     ctx.font = "21px Marck Script";
     ctx.fillStyle ='black';
     ctx.fillText("HAPPY BIRTHDAY",200,20);
-    ctx.fillText("Првиет Ань,хочу поздравить тебя с др!!!",10,50);
+    ctx.fillText("Првиет Ань,хочу поздравить тебя с др!!!",10,70);
     ctx.fillText("Я не знаю че даже желать,всего самого лучшего,надеюсь все, что ",10,90);
     ctx.fillText("ты сегодня пожелала сбудеться, да и вообще чтобы у тебя было ",10,110);
     ctx.fillText("все хорошо.",10,130);
     ctx.fillText("Да и главное чтобы было мирное небо над головой",10,150);
     ctx.fillText("все было хорошо с семьей и работой))",10,170);
-    ctx.fillText("В общем с днюхой!!!  ",10,230);
+    ctx.fillText("В общем с днюхой!!!  ",10,190);
     ctx.fillText('Writed by arMori :D to Ann',250,270);
     ctx.font = "16px Marck Script";
 }
